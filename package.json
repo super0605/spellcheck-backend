@@ -12,7 +12,7 @@
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "NODE_ENV=production node dist/src/main.js",
+    "start": "NODE_ENV=development nest start --watch",
     "start:dev": "NODE_ENV=development nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod-local": "NODE_ENV=production node dist/main",

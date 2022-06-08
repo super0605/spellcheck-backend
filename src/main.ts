@@ -14,6 +14,7 @@ async function bootstrap(): Promise<void> {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
     new FastifyAdapter(),
+    { cors: true },
   );
 
   app.setGlobalPrefix('/');
