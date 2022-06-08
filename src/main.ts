@@ -16,13 +16,13 @@ async function bootstrap(): Promise<void> {
     new FastifyAdapter(),
   );
 
-  app.setGlobalPrefix('api/v1');
+  app.setGlobalPrefix('/');
 
   const options = new DocumentBuilder()
     .setTitle('Outdefine Api')
     .setDescription('The Outdefine Api documentation')
     .setVersion('1.0')
-    .setBasePath('api/v1')
+    .setBasePath('/')
     .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, options);
